@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<config>
+
+	<global>
+		<helpers>
+			<arca3d>
+				<class>Studioone_ArCa3d_Helper</class>
+			</arca3d>
+		</helpers>
+	</global>
+	<menu>
+		<sales>
+			<children>
+				<arca3d translate="title" module="arca">
+					<title>Arca Transactions</title>
+					<action>arca3d/transactions/index</action>
+					<sort_order>20</sort_order>
+				</arca3d>
+			</children>
+		</sales>
+	</menu>
+	<acl>
+		<resources>
+			<all>
+				<title>Allow Everything</title>
+			</all>
+			<admin>
+				<children>
+					<sales>
+						<children>
+							<arca3d translate="title">
+								<title>Arca Transactions</title>
+								<children>
+									<grid translate="title">
+										<title>Grid</title>
+									</grid>
+									<view translate="title">
+										<title>View</title>
+									</view>
+								</children>
+							</arca3d>
+						</children>
+					</sales>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>

@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+    <arca3d_index_index>
+    	 <reference name="root">
+            <action method="setTemplate"><template>arca3d/payment/empty.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="core/template" template="arca3d/payment/arca.phtml" />
+        </reference>
+        
+    </arca3d_index_index>
+     <checkout_cart_index>
+        <reference name="checkout.cart.methods">
+            <block type="arca3d/form_arca" name="checkout.cart.methods.arca.bottom" before="-" template="arca3d/payment/shortcut.phtml">
+                <action method="setIsQuoteAllowed"><value>1</value></action>
+            </block>
+        </reference>
+
+        <update handle="SHORTCUT_popup" />
+    </checkout_cart_index>
+    <arca3d_processing_error translate="label">
+		<label>Payment Error</label>
+        <remove name="right"/>
+        <remove name="left"/>
+		 <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+	</arca3d_processing_error>
+	<arca3d_processing_success translate="label">
+ 	
+        <label>Payment Result Action</label>
+         
+        
+        <!-- Mage_Checkout -->
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+        </reference>
+        <reference name="content">
+              <block type="arca3d/success" name="arca.success"/> 
+        </reference>
+        
+    </arca3d_processing_success>
+    <arca3d_processing_result translate="label">
+ 	
+        <label>Payment Result Action</label>
+        <remove name="right"/>
+        <remove name="left"/>
+        <!-- Mage_Checkout -->
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+              <block type="arca3d/result" name="arca.result"/> 
+        </reference>
+        
+    </arca3d_processing_result>
+ 	<arca3d_processing_index translate="label">
+ 	
+        <label>Payment Form Page</label>
+         
+        <!-- Mage_Checkout -->
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+        </reference>
+        <reference name="head">
+           <action method="addJs"><script>arca/arca.js</script></action>
+           <action method="addCss"><stylesheet>arca/css/arca.css</stylesheet></action>
+        </reference>
+        <reference name="content">
+              <block type="arca3d/form_payment_form" name="form.payment"></block>	
+        </reference>
+        
+    </arca3d_processing_index>
+</layout> 

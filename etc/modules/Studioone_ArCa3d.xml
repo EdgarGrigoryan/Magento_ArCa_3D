@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Studioone_ArCa3d>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends><Mage_Payment/></depends>
+        </Studioone_ArCa3d>
+    </modules>
+</config> 

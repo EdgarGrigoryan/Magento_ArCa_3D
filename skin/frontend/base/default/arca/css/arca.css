@@ -1,0 +1,11 @@
+button.arca-payment-submit
+{
+	background:url(images/arca.gif);
+	border:none;
+	width:103px;
+	height:67px;
+	margin: 0 auto;
+	cursor:pointer;
+	overflow: hidden;
+	text-indent: -200px;
+} 

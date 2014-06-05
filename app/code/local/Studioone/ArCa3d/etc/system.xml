@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<tabs>
+        <arca3d translate="label">
+            <label>Arca Payment</label>
+            <sort_order>1000</sort_order>
+        </arca3d>
+    </tabs>
+  <sections>
+    <payment>
+      <groups>
+        <arca3d translate="label" module="arca3d">
+          <label>Arca Payment Module</label>
+          <sort_order>670</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>0</show_in_store>
+          <fields>
+          	
+			 <attribute_set translate="label">
+				<label>Attribute set</label>
+				<frontend_type>multiselect</frontend_type>
+				<source_model>arca3d/system_config_source_view</source_model>
+				 <sort_order>0</sort_order>
+				<show_in_default>1</show_in_default>
+			 </attribute_set>	
+          	 <title>
+          	  <label>Title</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>5</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+			  
+            </title>
+            <active translate="label">
+              <label>Enabled</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </active>
+            <testmode translate="label">
+              <label>Test Mode</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </testmode>
+             <merchantnumber translate="label">
+              <label>Merchant number</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>30</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+			   
+            </merchantnumber>
+             <merchanpasswd translate="label">
+              <label>merchant Passwd</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>40</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+			   
+            </merchanpasswd>
+            
+            <message translate="label">
+              <label>Displayed Message</label>
+              <frontend_type>textarea</frontend_type>
+              <sort_order>70</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </message>
+          </fields>
+        </arca3d>
+      </groups>
+    </payment>
+  </sections>
+</config>
